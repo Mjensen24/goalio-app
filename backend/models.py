@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text, Date
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
-from werkzeug.security import generate_password_hash
+import hashlib
 
 Base = declarative_base()
 
@@ -26,7 +26,10 @@ class User(Base):
     comments = relationship("Comment", back_populates="user")
 
     def set_password(self, password):
-        self.password = generate_password_hash(password)
+        self.password = hashlib.sha256(password.encode()).hexdigest()
+
+    def check_password(self, password):
+        return self.password == hashlib.sha256(password.encode()).hexdigest()
 
 class Project(Base):
     __tablename__ = 'projects'
