@@ -26,6 +26,7 @@
 
 .App-link {
   color: #61dafb;
+  margin-top: 1rem;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +36,85 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Login form styles */
+.login-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #282c34;
+  max-width: 300px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+  color: #282c34;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #282c34;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.App-button {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.App-button:hover {
+  background-color: #21a1c9;
+}
+
+.App-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Logged in content styles */
+.logged-in-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.logged-in-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.logged-in-content p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
